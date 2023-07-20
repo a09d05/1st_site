@@ -1,0 +1,305 @@
+html
+{
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+.outer1
+{
+	border-radius: 40px;
+	box-sizing: content-box;
+	width: 1180px;
+	height: 80px;
+	background-color: #E73D66;
+	margin-left: 6%;
+	margin-bottom: 75px;
+}
+
+
+.Vector
+{
+	width: 50px;
+	height: 44px;
+	margin-left: 25px;
+	margin-top: 17px;
+	flex-shrink: 0;
+	margin-right: 15px;
+}
+
+.foot
+{
+	width: 80px;
+	height: 33px;
+	flex-shrink: 0;
+	margin-bottom: 5px;
+	margin-right: 150px;
+}
+
+.about
+{
+	width: 75px;
+	height: 20px;
+	color: #FFF;
+	font-size: 14px;
+	font-family: 'Rubik';
+	font-weight: 500;
+	line-height: 20px;
+	padding: 18px;
+	text-transform: uppercase;
+	vertical-align: 15px;
+}
+
+.auth
+{
+	width: 30px;
+	height: 30px;
+	margin-left: 30px;
+	vertical-align: 5px;
+}
+
+.icon-A
+{
+	display: inline-block;
+	margin-left: 135px;
+	vertical-align: 7px;
+	margin-right: 15px;
+}
+
+.icon-B
+{
+	display: inline-block;
+	vertical-align: 7px;
+	margin-right: 15px;
+}
+
+.icon-C
+{
+	display: inline-block;
+	vertical-align: 7px;
+}
+
+.authoriz
+{
+	text-align: center;
+}
+
+.log
+{
+	margin-bottom: 30px;
+	text-align: center;
+	margin-right: 45px;
+}
+
+.pass
+{
+	margin-bottom: 15px;
+	text-align: center;
+	margin-right: 45px;
+}
+
+.send
+{
+	text-align: center;
+}
+
+.reg
+{
+	text-align: center;
+}
+
+
+.contact
+{
+	display: flex;
+	width: 1180px;
+	height: 320px;
+	border-radius: 30px;
+	background: #F4F4F4;
+	margin-left: 80px;
+}
+
+.message
+{
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
+	background: #E73D66;
+	margin: auto;
+}
+
+.sms
+{
+	padding: 15px 0 20px 15px;
+}
+
+.email
+{
+	display: inline-block;
+	width: 280px;
+	height: 60px;
+	flex-direction: column;
+	flex-shrink: 0;
+	color: #E73D66;
+	margin-left: -50px;
+	font-size: 16px;
+	font-family: Rubik;
+	line-height: 20px;
+}
+
+.call
+{
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
+	background: #E73D66;
+	margin: auto;
+	margin-top: 70px;
+}
+
+.call_img
+{
+	width: 30px;
+	height: 30px;
+	padding: 15px 0 20px 15px;
+}
+
+.telephone
+{
+	display: inline-block;
+	width: 380px;
+	flex-direction: column;
+	flex-shrink: 0;
+	color: #444;
+	margin-left: -90px;
+	font-size: 30px;
+	font-family: Rubik;
+	font-weight: 500;
+	line-height: 40px;
+}
+
+.schedule
+{
+	display: inline-block;
+	width: 380px;
+	height: 32px;
+	flex-direction: column;
+	flex-shrink: 0;
+	white-space: nowrap;
+	color: #999;
+	margin-left: -65px;
+	font-size: 14px;
+	font-family: Rubik;
+	font-weight: 300;
+	line-height: 22px;
+	margin-bottom: 20px;
+}
+
+.networks
+{
+	white-space: nowrap;
+	margin-left: -30px;
+}
+
+.insta
+{
+	margin-right: 15px;
+}
+
+.vk
+{
+	margin-right: 15px;
+}
+
+.tg
+{
+	margin-right: 15px;
+}
+
+.locate
+{
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
+	background: #E73D66;
+	margin: auto;
+}
+
+.location
+{
+	width: 30px;
+	height: 30px;
+	padding: 15px 0 20px 15px;
+}
+
+.address
+{
+	white-space: nowrap;
+	display: inline-block;
+	width: 280px;
+	height: 45px;
+	flex-direction: column;
+	flex-shrink: 0;
+	color: #444;
+	margin-left: -70px;
+	font-size: 16px;
+	font-family: Rubik;
+	line-height: 20px;
+}
+
+.addr
+{
+	display: inline-block;
+	margin-left: 60px;
+}
+
+.end
+{
+	display: inline-block;
+	margin-left: 35%;
+	margin-top: 50px;
+}
+
+.company
+{
+	display: inline-block;
+	width: 80px;
+	flex-direction: column;
+	flex-shrink: 0;
+	color: #999;
+	font-size: 12px;
+	font-family: Montserrat;
+	line-height: 18px;
+	white-space: nowrap;
+	margin-left: -380px;
+	margin-right: 420px;
+}
+
+.confident
+{
+	display: inline-block;
+	width: 80px;
+	flex-direction: column;
+	flex-shrink: 0;
+	color: #999;
+	font-size: 12px;
+	font-family: Montserrat;
+	line-height: 18px;
+	white-space: nowrap;
+	margin-right: 400px;
+}
+
+.develop
+{
+	display: inline-block;
+	width: 80px;
+	flex-direction: column;
+	flex-shrink: 0;
+	color: #999;
+	font-size: 12px;
+	font-family: Montserrat;
+	line-height: 18px;
+	white-space: nowrap;
+}
