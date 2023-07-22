@@ -15,7 +15,6 @@ html
 	margin-bottom: 75px;
 }
 
-
 .Vector
 {
 	width: 50px;
@@ -76,6 +75,30 @@ html
 {
 	display: inline-block;
 	vertical-align: 7px;
+}
+
+.reg_form
+{
+	margin-left: 40%;
+	margin-bottom: 30px;
+}
+
+.name
+{
+	margin-bottom: 30px;
+}
+
+.click
+{
+	margin-top: 30px;
+	margin-left: 50px;
+}
+
+.readdress
+{
+	margin-left: 30%;
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
 
 .contact

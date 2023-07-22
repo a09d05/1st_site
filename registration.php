@@ -29,7 +29,40 @@
 	</div>
 </header>
 <body>
-
+<?php
+	if (isset($_POST["name"]) && isset($_POST["age"])) 
+	{
+		$username = $_POST["name"];
+		$userage = $_POST["age"];
+		try
+		{
+			$conn = new PDO("mysql:host=localhost;dbname=testdb", "admin", "adminadmin");
+			$sql = "INSERT INTO users (name, age) VALUES ('$username', '$userage')";
+			$affectedRowsNumber = $conn->exec($sql);
+		}
+		catch (PDOException $e)
+		{
+			echo "Database error: " . $e->getMessage();
+		}
+	}	
+?>
+	<form action="registration.php" name="insert_reg" method="POST" class="reg_form">
+		<ul style="list-style-type: none;">
+			<li>Имя</li><li class="name"><input type="text" name="name" /></li>
+			<!--<li>Фамилия</li><li><input type="text" name="user_surname" /></li>-->
+			<li class="age">Возраст</li><input type="text" name="age"></li>
+			<!--<li>Дата рождения</li><li><input type="text" name="birth_date" /></li>
+			<li>Логин</li><li><input type="text" name="user_login" /></li>
+			<li>Пароль</li><li><input type="password" name="user_password" /></li> -->
+			<li class="click"><input type="submit" /></li>
+		</ul>
+	</form>
+	<?php if (isset($_POST["name"]) && isset($_POST["age"])) { ?>
+		<p class="readdress">Вы успешно зарегистрировались и будете перенаправлены на главную страницу</p>
+		<script>
+			window.setTimeout(function() {window.location = "main.php"; }, 2000)
+		</script>
+	<?php } ?> 
 </body>
 <footer>
 	<div class="contact">

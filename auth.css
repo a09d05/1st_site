@@ -107,7 +107,6 @@ html
 	text-align: center;
 }
 
-
 .contact
 {
 	display: flex;
@@ -116,6 +115,7 @@ html
 	border-radius: 30px;
 	background: #F4F4F4;
 	margin-left: 80px;
+	margin-top: 40px;
 }
 
 .message

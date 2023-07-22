@@ -2193,3 +2193,7 @@ PHP Warning:  PHP Startup: Unable to load dynamic library 'pdo_pgsql' (tried: C:
 [Thu Jul 20 10:31:48.968846 2023] [mpm_winnt:notice] [pid 4316:tid 380] AH00456: Apache Lounge VS16 Server built: Mar  7 2023 13:21:03
 [Thu Jul 20 10:31:48.968846 2023] [core:notice] [pid 4316:tid 380] AH00094: Command line: 'C:\\Apache24\\bin\\httpd.exe -d C:/Apache24'
 [Thu Jul 20 10:31:48.968846 2023] [mpm_winnt:notice] [pid 4316:tid 380] AH00418: Parent: Created child process 5824
+PHP Warning:  PHP Startup: Unable to load dynamic library 'pdo_pgsql' (tried: C:\\php\\ext\\pdo_pgsql (\xd0\x9d\xd0\xb5 \xd0\xbd\xd0\xb0\xd0\xb9\xd0\xb4\xd0\xb5\xd0\xbd \xd1\x83\xd0\xba\xd0\xb0\xd0\xb7\xd0\xb0\xd0\xbd\xd0\xbd\xd1\x8b\xd0\xb9 \xd0\xbc\xd0\xbe\xd0\xb4\xd1\x83\xd0\xbb\xd1\x8c), C:\\php\\ext\\php_pdo_pgsql.dll (\xd0\x9d\xd0\xb5 \xd0\xbd\xd0\xb0\xd0\xb9\xd0\xb4\xd0\xb5\xd0\xbd \xd1\x83\xd0\xba\xd0\xb0\xd0\xb7\xd0\xb0\xd0\xbd\xd0\xbd\xd1\x8b\xd0\xb9 \xd0\xbc\xd0\xbe\xd0\xb4\xd1\x83\xd0\xbb\xd1\x8c)) in Unknown on line 0
+[Thu Jul 20 10:31:55.053269 2023] [mpm_winnt:notice] [pid 5824:tid 396] AH00354: Child: Starting 64 worker threads.
+[Thu Jul 20 16:29:32.846646 2023] [php:error] [pid 5824:tid 1132] [client ::1:53615] script 'C:/localhost/registration.php' not found or unable to stat, referer: http://localhost/auth.php?
+[Thu Jul 20 16:29:56.232366 2023] [php:error] [pid 5824:tid 1132] [client ::1:64001] script 'C:/localhost/registration.php' not found or unable to stat, referer: http://localhost/auth.php?
