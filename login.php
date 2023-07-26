@@ -1,7 +1,6 @@
 <?php
-	$host = 'localhost';
-	$port = 5432;
-	$dbname = 'sitedb';
-	$user = 'postgres';
-	$password = 'postgres';
+	function connect()
+	{
+		return new PDO("mysql:host=localhost;dbname=php-auth-demo", "root", "N28,rty5");
+	}
 ?>
