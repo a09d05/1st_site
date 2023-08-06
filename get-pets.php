@@ -29,25 +29,18 @@
 </header>
 <body>
 	<?php
-	if (isset($_POST['user_name']) && isset($_POST['user_age'])) 
+	if (isset($_POST['name']) && isset($_POST['email'])) 
 	{
 		try 
 		{
-			$conn = new PDO("mysql:host=localhost;dbname=php-auth-demo", "root", "N28,rty5");
-			$query = "INSERT INTO users (user_name, user_age) VALUES (:user_name, :user_age);";
+			$conn = new PDO("mysql:host=localhost;dbname=sitedb", "root", "N28,rty5");
 			$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			$query = "INSERT INTO reqs (name, surname, age, email, phone, pet) VALUES (?, ?, ?, ?, ?, ?);";
 			$stmt = $conn->prepare($query);
-			$stmt->bindValue(":user_name", $_POST['user_name']);
-			$stmt->bindValue(":user_age", $_POST['user_age']);
-			$affectedRowsNumber = $stmt->execute();
-			if ($affectedRowsNumber > 0) 
-			{
-				echo "Data successfully added: name=" . $_POST['user_name'] ." age= " . $_POST['user_age'];
-			}
-			sleep(5);
-			http_redirect('main.php');
-		} 
-		catch (PDOException $e) 
+			$rowNumber = $stmt->execute(array($_POST['name'], $_POST['surname'], $_POST['age'], $_POST['email'], $_POST['phone'], $_POST['pet']));
+			echo "Все отлично";
+		}
+		catch (PDOException $e)
 		{
 			echo "DBError: " . $e->getMessage();
 			echo "<br />";
@@ -60,13 +53,32 @@
 		}
 	}
 	?>
-	<h3>Вход</h3>
+	<h3>Оставить заявку</h3>
 	<form method="POST" action="get-pets.php">
-		<p>User name:
-		<input type="text" name="user_name"></p>
-		<p>User age:
-		<input type="text" name="user_age"></p>
-		<input type="submit" value="Войти">
+		<p>Name:
+		<input type="text" name="name"></p>
+		<p>Surname:
+		<input type="text" name="surname"></p>
+		<p>Age:
+		<input type="number" name="age"></p>
+		<p>Email:
+		<input type="email" name="email"></p>
+		<p>Phone number:
+		<input type="number" name="phone"></p>
+		<p>Pet:
+		<input list="petList" type="text" name="pet" placeholder="Имя питомца">
+		<datalist id="petList">
+			<option value="Майло" label="Джек-рассел-терьер | Мальчик"></option>
+			<option value="Герта" label="Лабрадор | Девочка"></option>
+			<option value="Мартин" label="Лабрадор | Мальчик"></option>
+			<option value="Чарли" label="Мопс | Мальчик"></option>
+			<option value="Линда" label="Бигль | Девочка"></option>
+			<option value="Зельда" label="Джек-рассел-терьер | Девочка"></option>
+			<option value="Пончо" label="Золотистый ретривер | Мальчик"></option>
+			<option value="Дензел" label="Бульдог | Мальчик"></option>
+		</datalist>
+		</p>
+		<input type="submit" value="Отправить">
 	</form>
 </body>
 <footer class="down">
