@@ -29,22 +29,22 @@
 </header>
 <body>
 	<?php
-	if (isset($_POST['name']) && isset($_POST['email'])) 
+	if (isset($_POST['reqPhone']) && isset($_POST['reqPet'])) 
 	{
 		try 
 		{
 			$conn = new PDO("mysql:host=localhost;dbname=sitedb", "root", "N28,rty5");
 			$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			$query = "INSERT INTO reqs (name, surname, age, email, phone, pet) VALUES (?, ?, ?, ?, ?, ?);";
+			$query = "INSERT INTO reqs (reqName, reqSurname, reqMiddleName, reqPet, reqDate, reqPhone) VALUES (?, ?, ?, ?, ?, ?);";
 			$stmt = $conn->prepare($query);
-			$rowNumber = $stmt->execute(array($_POST['name'], $_POST['surname'], $_POST['age'], $_POST['email'], $_POST['phone'], $_POST['pet']));
+			$rowNumber = $stmt->execute(array($_POST['reqName'], $_POST['reqSurname'], $_POST['reqMiddleName'], $_POST['reqPet'], $_POST['reqDate'], $_POST['reqPhone']));
 			echo "Все отлично";
 		}
 		catch (PDOException $e)
 		{
 			echo "DBError: " . $e->getMessage();
 			echo "<br />";
-			echo "<a href=\'main.php\'>Try again.</a>";
+			echo "<a href='main.php'>Try again.</a>";
 		}
 		finally
 		{
@@ -55,29 +55,42 @@
 	?>
 	<h3>Оставить заявку</h3>
 	<form method="POST" action="get-pets.php">
-		<p>Name:
-		<input type="text" name="name"></p>
-		<p>Surname:
-		<input type="text" name="surname"></p>
-		<p>Age:
-		<input type="number" name="age"></p>
-		<p>Email:
-		<input type="email" name="email"></p>
-		<p>Phone number:
-		<input type="number" name="phone"></p>
-		<p>Pet:
-		<input list="petList" type="text" name="pet" placeholder="Имя питомца">
+		<p>Фамилия:
+		<input type="text" name="reqSurname" required></p>
+		<p>Имя:
+		<input type="text" name="reqName" required></p>
+		<p>Отчество (при наличии):
+		<input type="text" name="reqMiddleName"></p>
+		<p>Номер телефона:
+		<input type="tel" name="reqPhone" required></p>
+		<p>Выбранный питомец:
+		<input list="petList" type="text" name="reqPet" required>
 		<datalist id="petList">
-			<option value="Майло" label="Джек-рассел-терьер | Мальчик"></option>
-			<option value="Герта" label="Лабрадор | Девочка"></option>
-			<option value="Мартин" label="Лабрадор | Мальчик"></option>
-			<option value="Чарли" label="Мопс | Мальчик"></option>
-			<option value="Линда" label="Бигль | Девочка"></option>
-			<option value="Зельда" label="Джек-рассел-терьер | Девочка"></option>
-			<option value="Пончо" label="Золотистый ретривер | Мальчик"></option>
-			<option value="Дензел" label="Бульдог | Мальчик"></option>
-		</datalist>
-		</p>
+			<?php
+				try 
+				{
+					$conn = new PDO("mysql:host=localhost;dbname=sitedb", "root", "N28,rty5");
+					$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+					$query = "SELECT petName FROM pets ORDER BY petId";
+					$result = $conn->query($query);
+					while ($row = $result->fetch()) 
+					{
+						echo "<option value=".$row['petName'].">".$row['petName']."</option>";
+					}
+				}
+				catch (PDOException $e)
+				{
+					echo "DBError: " . $e->getMessage();
+				}	
+				finally
+				{
+					$conn = null;
+					$query = null;
+				}
+			?>
+		</datalist></p>
+		<p>Дата подачи заявки:
+		<input type="date" name="reqDate" required></p>
 		<input type="submit" value="Отправить">
 	</form>
 </body>

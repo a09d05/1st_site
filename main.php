@@ -22,7 +22,6 @@
 		<a href="pets.php" class="about B" target="_blank">питомцы</a>
 		<a href="goodAdvices.php" class="about C" target="_blank">полезные советы</a>
 		<a href="contacts.php" class="about D" target="_blank">контакты</a>
-		<a href="auth.php"><img src="./images/enter.png" class="auth"></a>
 		<a href="https://instagram.com"><img src="./images/inst.png" class="icon-A"></a>
 		<a href="https://vk.com"><img src="./images/mask1.png" class="icon-B"></a>
 		<a href="https://telegram.org"><img src="./images/mask2.png" class="icon-C"></a>
@@ -37,8 +36,8 @@
 		<p class="mission">Миссия проекта - формирование культуры ответственного отношения к домашним животным. Решение взять кошку или собаку из приюта должно быть осознанным, именно поэтому мы помогаем потенциальным владельцам не только найти питомца, но и подготовиться к жизни с новым другом.</p>
 	</div>
 	<div class="buttons">
-		<a href="pets.php" class="key1"><p class="text">взять питомца</p></a>
-		<a href="help.php" class="key2"><p class="help">помочь приюту</p></a>
+		<a href="get-pets.php" class="key1" target="_blank"><p class="text">взять питомца</p></a>
+		<a href="help.php" class="key2" target="_blank"><p class="help">помочь приюту</p></a>
 	</div>
 	<span class="our-pets">наши питомцы</span>
 	<div class="pets-list-1">
@@ -129,7 +128,7 @@
 			<span class="description">Мы поможем вам с<br>транспортировкой</span>
 		</div>
 	</div>
-	<a href="pets.php" class="key3">взять питомца</a>
+	<a href="get-pets.php" class="key3">взять питомца</a>
 	<span class="helpful">полезные советы</span>
 	<div class="advice1">
 		<img src="./images/dog_water.png" class="dog_water" align="left">
