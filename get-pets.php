@@ -53,17 +53,17 @@
 		}
 	}
 	?>
-	<h3>Оставить заявку</h3>
-	<form method="POST" action="get-pets.php">
-		<p>Фамилия:
+	<h3 class="sendQuery">Оставить заявку</h3>
+	<form method="POST" action="get-pets.php" class="queryForm">
+		<p class="reqSurname">Фамилия:
 		<input type="text" name="reqSurname" required></p>
-		<p>Имя:
+		<p class="reqName">Имя:
 		<input type="text" name="reqName" required></p>
-		<p>Отчество (при наличии):
+		<p class="reqMiddleName">Отчество (при наличии):
 		<input type="text" name="reqMiddleName"></p>
-		<p>Номер телефона:
+		<p class="reqPhone">Номер телефона:
 		<input type="tel" name="reqPhone" required></p>
-		<p>Выбранный питомец:
+		<p class="reqPet">Выбранный питомец:
 		<input list="petList" type="text" name="reqPet" required>
 		<datalist id="petList">
 			<?php
@@ -89,9 +89,9 @@
 				}
 			?>
 		</datalist></p>
-		<p>Дата подачи заявки:
+		<p class="reqDate">Дата подачи заявки:
 		<input type="date" name="reqDate" required></p>
-		<input type="submit" value="Отправить">
+		<input type="submit" value="Отправить" class="sendButton">
 	</form>
 </body>
 <footer class="down">
